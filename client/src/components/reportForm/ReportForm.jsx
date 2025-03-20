@@ -31,7 +31,7 @@ const ReportForm = () => {
   useEffect(() => {
     const fetchDatabases = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/api/db/get_all_db`,
+        const response = await axios.get(`https://db-report-backend.onrender.com/api/db/get_all_db`,
          
         );
        
@@ -77,7 +77,7 @@ const ReportForm = () => {
 
     try {
       const response = await axios.post(
-        `http://localhost:5000/api/report/add_report/${id}`,
+        `https://db-report-backend.onrender.com/api/report/add_report/${id}`,
         formDataToSend,
         {
           withCredentials: true,
