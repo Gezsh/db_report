@@ -23,9 +23,11 @@ const login = async (req, res, next) => {
       const token = user.createJWT();
       user.password = undefined;
   
-      res.cookie("token", token, {
-        httpOnly: true,
-      });
+     res.cookie("token", token, { 
+    httpOnly: true,
+    secure: true,        // ✅ very important on HTTPS!
+    sameSite: 'none'     // ✅ allows sending cookies cross-origin
+});
   
       res.status(200).json({ data: user, token });
     } catch (error) {
