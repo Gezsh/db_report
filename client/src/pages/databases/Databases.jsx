@@ -23,7 +23,7 @@ const Databases = () => {
 
   const fetchDatabases = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/api/db/get_all_db", {
+      const response = await axios.get("https://db-report-backend.onrender.com/api/db/get_all_db", {
         withCredentials: true,
       });
       setDatabases(response.data);
@@ -65,7 +65,7 @@ const Databases = () => {
   // Create Database
   const handleCreate = async () => {
     try {
-      await axios.post("http://localhost:5000/api/db/create_db", formData, {
+      await axios.post("https://db-report-backend.onrender.com/api/db/create_db", formData, {
         withCredentials: true,
       });
       setIsCreateModalOpen(false);
@@ -78,7 +78,7 @@ const Databases = () => {
   // Update Database
   const handleUpdate = async () => {
     try {
-      await axios.patch(`http://localhost:5000/api/db/update_db/${selectedDatabase}`, formData, {
+      await axios.patch(`https://db-report-backend.onrender.com/api/db/update_db/${selectedDatabase}`, formData, {
         withCredentials: true,
       });
       setIsEditModalOpen(false);
@@ -91,7 +91,7 @@ const Databases = () => {
   // Delete Database
   const handleDelete = async () => {
     try {
-      await axios.delete(`http://localhost:5000/api/db/delete_db/${selectedDatabase}`, {
+      await axios.delete(`https://db-report-backend.onrender.com/api/db/delete_db/${selectedDatabase}`, {
         withCredentials: true,
       });
       setIsDeleteConfirmOpen(false);
