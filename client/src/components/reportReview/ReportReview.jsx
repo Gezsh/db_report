@@ -19,7 +19,7 @@ const ReportReview = () => {
     const fetchReports = async () => {
       setLoading(true);
       try {
-        const response = await axios.get("http://localhost:5000/api/report/get_all_report", {
+        const response = await axios.get("https://db-report-backend.onrender.com/api/report/get_all_report", {
           withCredentials: true,
         });
         console.log(response)
@@ -34,7 +34,7 @@ const ReportReview = () => {
         const userIds = [...new Set(sortedReports.map(report => report.userId).filter(id => id))];
 
         const userResponses = await Promise.all(
-          userIds.map(id => axios.get(`http://localhost:5000/api/user/get_A_user/${id}`, { withCredentials: true }))
+          userIds.map(id => axios.get(`https://db-report-backend.onrender.com/api/user/get_A_user/${id}`, { withCredentials: true }))
         );
 
         const userMap = {};
@@ -94,7 +94,7 @@ const ReportReview = () => {
   const handleImageClick = (imagePath) => {
     
     if (imagePath) {
-      const correctedPath = `http://localhost:5000/${imagePath.replace('public/', '')}`;
+      const correctedPath = `https://db-report-backend.onrender.com/${imagePath.replace('public/', '')}`;
       setSelectedImage(correctedPath);
     }
   };
