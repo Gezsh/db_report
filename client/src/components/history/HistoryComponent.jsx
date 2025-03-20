@@ -19,7 +19,7 @@ const HistoryComponent = () => {
       setLoading(true);
       try {
         const response = await axios.get(
-          `http://localhost:5000/api/report/get_A_report/${userId}`,
+          `https://db-report-backend.onrender.com/api/report/get_A_report/${userId}`,
           { withCredentials: true }
         );
 
@@ -82,7 +82,7 @@ const HistoryComponent = () => {
       if (resourceFile) formData.append("resourceFile", resourceFile);
 
       await axios.patch(
-        `http://localhost:5000/api/report/update_report/${userId}`,
+        `https://db-report-backend.onrender.com/api/report/update_report/${userId}`,
         formData,
         { withCredentials: true, headers: { "Content-Type": "multipart/form-data" } }
       );
