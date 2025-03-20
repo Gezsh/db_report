@@ -1,0 +1,10 @@
+.history {
+    display: flex;
+  }
+  
+  .history-content {
+    flex: 1;
+    padding: 20px;
+    margin-left: 210px;
+  }
+  

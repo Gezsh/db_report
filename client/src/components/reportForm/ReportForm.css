@@ -1,0 +1,161 @@
+/* Report Form Container */
+.report-form-container {
+    width: 100%;
+    max-width: 900px; /* Keeps it centered and neat */
+    margin: 40px auto;
+    padding: 10px;
+    
+    background: linear-gradient(to right, #ffffff, #f7f9fc);
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Form Title */
+.report-form-container h2 {
+    font-size: 26px;
+    color: #007bff;
+    margin-bottom: 20px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Add an icon next to the title */
+.report-form-container h2::before {
+    content: "📝";
+    margin-right: 10px;
+}
+
+/* Form Styling */
+.report-form-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Grouped Inputs */
+.input-group {
+    display: flex;
+    gap: 12px;
+    justify-content: space-between;
+}
+
+/* Ensuring Inputs Fill Available Space */
+.input-group input, .input-group select {
+    flex: 1;
+}
+
+/* Input & Textarea Fields */
+.report-form-container input,
+.report-form-container textarea,
+.report-form-container select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    background: #ffffff;
+    transition: 0.3s ease-in-out;
+}
+
+/* Add Focus Effect */
+.report-form-container input:focus,
+.report-form-container textarea:focus,
+.report-form-container select:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Textarea Specific Styles */
+.report-form-container textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+/* Dropdown Styling */
+.report-form-container select {
+    appearance: none;
+    cursor: pointer;
+}
+
+/* Submit Button */
+.report-form-container button {
+    width: 100%;
+    background: #007bff;
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+/* Button Hover Effect */
+.report-form-container button:hover {
+    background: #0056b3;
+    transform: translateY(-2px);
+}
+
+
+
+
+
+
+
+/* Add styling for file inputs */
+.input-group input[type="file"] {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background: #f8f9fa;
+  }
+  
+  /* Adjust input group layout */
+  .input-group {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+  
+  .input-group label {
+    min-width: 150px;
+    text-align: left;
+  }
+
+
+  
+
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .input-group {
+        flex-direction: column;
+    }
+}
+/* Add styling for file inputs */
+.input-group input[type="file"] {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background: #f8f9fa;
+}
+
+/* Adjust input group layout */
+.input-group {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.input-group label {
+  min-width: 150px;
+  text-align: left;
+}

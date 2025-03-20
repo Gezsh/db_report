@@ -1,0 +1,61 @@
+.register-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+  
+.register-form {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    text-align: center;
+}
+  
+.register-form h2 {
+    margin-bottom: 15px;
+}
+  
+.register-form input,
+.register-form select {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    /* display: block; /* Ensures it behaves like input */
+    box-sizing: border-box; /* Ensures padding doesn't affect width */
+    appearance: none; /* Removes default browser styling */
+}
+
+.register-form select {
+    background-color: white;
+    cursor: pointer;
+}
+
+.register-form button {
+    width: 100%;
+    padding: 10px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.register-form button:hover {
+    background: #0056b3;
+}
+
+.error-message {
+    color: red;
+    font-size: 14px;
+}
+
+.success-message {
+    color: green;
+    font-size: 14px;
+}
